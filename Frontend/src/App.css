@@ -1,0 +1,30 @@
+@font-face {
+  font-family: 'Riona Sans';
+  font-style: italic;
+  font-weight: bold;
+  src: url('path-to-your-font-file.woff2') format('woff2'),
+    url('path-to-your-font-file.woff') format('woff');
+}
+
+.bold-italic-text {
+  font-family: 'Riona Sans', sans-serif;
+  font-style: italic;
+  font-weight: bold;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Riona Sans', sans-serif;
+  height: 100%;
+  width: 100%;
+}
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background-color: orange;
+}

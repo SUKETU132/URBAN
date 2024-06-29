@@ -1,0 +1,59 @@
+.shop-banner {
+    max-width: 1350px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    margin-bottom: 100px;
+}
+
+.sort-by {
+    max-width: 1350px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.sort-price-dropdown {
+    position: absolute;
+}
+
+.sort-label {
+    width: 100px;
+    font-weight: 640;
+}
+
+#sort {
+    gap: 10px;
+}
+
+.sort-btn-toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    background-color: rgba(0, 0, 0, 0);
+    border: 2px solid black;
+    border-radius: 3rem;
+    color: black;
+}
+
+.shop-category-width {
+    margin-top: 100px;
+    max-width: 1350px;
+    margin-right: auto;
+    margin-left: auto;
+    gap: 20px;
+    margin-bottom: 150px;
+}
+
+.sort-price-dropdown {
+    z-index: 4;
+}
+
+.scrollbar-hide {
+    -ms-overflow-style: none;  
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;             
+  }

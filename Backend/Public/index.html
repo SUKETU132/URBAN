@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add to Cart</title>
+</head>
+
+<body>
+    <h1>Add to Cart</h1>
+    <form id="addToCartForm">
+        <label for="productId">Product ID:</label>
+        <input type="text" id="productId" name="productId" required>
+        <button type="submit">Add to Cart</button>
+    </form>
+
+    <div id="message"></div>
+
+    <script>
+        document.getElementById('addToCartForm').addEventListener('submit', async function (event) {
+            event.preventDefault();
+
+            const productId = document.getElementById('productId').value;
+            token = "eyJpZCI6IjY2NGI0MjY2MDAwYjI1ZTJkYTU4Iiwic2VjcmV0IjoiYjUyYmQ5Nzg0ZTMyM2VlNzRlODIyY2M5ZjE3NmRhMWVlYjI0YjNkYTEzMzRhMGNiZmQwZDlkMWZlNDM5OWVkOWM4ZWIyMDgzMGU3MGYzZDdlMWQ1YmQ5ZDY1MmZlZGZlZWM0MzBmOGVjNmZlZmE0ZjAxYWNmYjYxOTRiZmE5Nzc3MmNiYjE1MzM2ZjlhMDA3Yzg4NDI1YmIzNjYxZjE4MGQwNTQwZGJlMjljNjg4ZTE0YzVkNWExMzY5M2VkMWI0NjhmNzFkMDc2ZGQ3OTdkNjdjYmUzYTI2NDdlMjBjMjcwODU0OGQxMGRmMGZmYzUwZGI0MDk4YTg2YTY0NGM1NCJ9";
+            try {
+                const response = await fetch('http://localhost:5500/api/v1/cart/add-to-cart', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'authorization': token // Replace with a valid token
+                    },
+                    body: JSON.stringify({ productId })
+                });
+
+                const data = await response.json();
+
+                if (response.ok) {
+                    document.getElementById('message').textContent = 'Product added to cart successfully!';
+                    console.log('Cart:', data);
+                } else {
+                    document.getElementById('message').textContent = `Error: ${data.message}`;
+                    console.error('Error:', data);
+                }
+            } catch (error) {
+                document.getElementById('message').textContent = 'An error occurred while adding the product to the cart.';
+                console.error('An error occurred:', error);
+            }
+        });
+    </script>
+</body>
+
+</html>

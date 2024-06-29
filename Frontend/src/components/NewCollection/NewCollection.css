@@ -1,0 +1,36 @@
+.new-collection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.new-collection>h1 {
+    font-size: 50px;
+    line-height: 1.2em;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #000;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    letter-spacing: 2px;
+    font-family: 'Roboto', sans-serif;
+    padding: 10px 0;
+    margin: 20px 0;
+    border-bottom: 3px solid #000;
+    transform: skew(-5deg);
+    display: inline-block;
+    margin-bottom: 70px;
+}
+
+.new-collection-item {
+    margin-bottom: 100px;
+    max-width: 1350px;
+    margin-right: auto;
+    margin-left: auto;
+    gap: 20px;
+}
+
+@media screen and (max-width: 536px) {
+    .new-collection>h1 {
+       font-size: 30px;
+    }
+}

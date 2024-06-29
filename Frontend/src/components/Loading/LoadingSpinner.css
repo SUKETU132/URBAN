@@ -1,0 +1,107 @@
+/* LoadingSpinner.css */
+.loading-spinner {
+    height: 80px;
+    width: 300px;
+    background-color: #fff;
+    position: fixed;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    color: #333;
+    border-radius: 1rem;
+    border-left: 6px solid orange;
+    top: 14px;
+    gap: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+
+.spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-top: 4px solid orange;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.reset-password-container {
+    position: absolute;
+    max-width: 400px;
+    
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.reset-password-container h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.reset-password-container p {
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #f00;
+}
+
+.reset-password-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.reset-password-container form div {
+    margin-bottom: 20px;
+}
+
+.reset-password-container label {
+    font-size: 16px;
+    color: #333;
+}
+
+.reset-password-container input {
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.reset-password-container button {
+    width: 100%;
+    height: 40px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: orange;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.reset-password-container button:hover {
+    background-color: rgba(255, 166, 0, 0.694);
+}
+
+.reset-password-container button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}

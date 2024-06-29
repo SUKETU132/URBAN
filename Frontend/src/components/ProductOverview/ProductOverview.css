@@ -1,0 +1,21 @@
+.selected {
+    border: 2px solid black;
+}
+
+.star-rating {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.star {
+    font-size: 2rem;
+    color: gray;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.star.filled {
+    color: orange;
+}
